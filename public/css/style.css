@@ -1,0 +1,26 @@
+#welcome {
+	color: #8A8A9A;
+	font-size: 40px;
+	text-align: center;
+
+}
+#forms {
+	color: #66CCFF;
+}
+
+body {
+	background-color: #19193C;
+}
+
+.formclass {
+	color: #8A8A9A;
+}
+
+h1 {
+	color: pink;
+}
+
+p {
+	color: #8A8A9A;
+	font-style: bold;
+}
