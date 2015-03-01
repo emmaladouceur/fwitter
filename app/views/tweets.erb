@@ -1,29 +1,16 @@
-<!doctype html>
-<html>
- <head>
-
-  
-  <title>FWITTER</title>
-<link rel="stylesheet" type="text/css" href="css/style.css">
-
- </head>
- <body>
- 	<h1 id="welcome"> Welcome to Fwitter </h1>
-
- 	<div id="forms" class="container">
 
 
- 		 <% @tweets.each do |tweet| %> 
- 			<h1> <%=tweet.user%> - <%= tweet.message%> </h1>
- 		<% end %>
+      <h3 id="gray">Fweets</h3>
 
- 		<form class="formclass" action="/tweet" method="POST">
- 			<p> User:</p> <input type="text" name="user">
- 			<p> Message:</p> <input type="text" name="message">
- 			<input type="submit">
+      <% @tweets.each do |tweet| %>
 
- 		</form> 
- 	</div>
- </body>
+        <p><strong><%=tweet.user.username %></strong> - <%= tweet.message %></p>
+      <% end %>
 
-</html> </html>
+      <h3 id="gray">Add a Fweet</h3>
+      <form action="/tweets" method="POST">
+        <input type="hidden" name="user_id" value= <%= session[:user_id] %>
+
+        <p> Message: </p> <input class="form-control" type="text" name="message">
+        <input type="submit" class="btn btn-default">
+      </form>

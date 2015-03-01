@@ -1,0 +1,23 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Fwitter</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/user_style.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+  </head>
+  <body>
+
+ <div class="container">
+      <h1>Welcome to Fwitter!</h1>
+
+  	<%= yield%> 
+
+  	 <% if session[:user_id] != nil %>
+      <a href="/logout"> Logout </a>
+      <% end %>
+  	
+
+    </div>
+  </body>
+</html>

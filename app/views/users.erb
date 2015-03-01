@@ -1,0 +1,26 @@
+
+    <% if @logged_in_user %>
+    	<p> Current User Is <%= @logged_in_user.username %> </p>
+    <% end %>
+
+      <h3 id="gray">Users</h3>
+      <% @users.each do |user| %>
+     <div class="info">
+        <img src="<%= user.profile_picture %>">
+        <p>Name: <%=user.username%></p>
+        <p>Email: <%= user.email %></p>
+        <p>Age: <%= user.age %></p>
+    </div>
+      <% end %>
+
+      <h3 id="gray">Add a User</h3>
+      <form action="/users" method="POST">
+      	<div id="new_user">
+        <p> Username: <input class="form-control" type="text" name="username"> </p>
+        <p> Email: <input class="form-control" type="text" name="email"> </p>
+        <p>Age: <input class="form-control" type="text" name="age"> </p>
+        <p>Profile Pic (url):
+        <input class="form-control" type="text" name="profile_picture"> </p>
+        <input type="submit" class="btn btn-default">
+    	</div>
+      </form>

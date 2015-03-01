@@ -1,23 +1,16 @@
-#welcome {
-	color: #8A8A9A;
-	font-size: 40px;
-	text-align: center;
 
-}
-#forms {
-	color: #66CCFF;
-}
 
 body {
 	background-color: #19193C;
 }
 
-.formclass {
+
+.headers {
 	color: #8A8A9A;
 }
 
 h1 {
-	color: pink;
+	color: #8A8A9A;
 }
 
 p {
